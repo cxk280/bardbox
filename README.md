@@ -62,12 +62,29 @@ already flowery — what the fine-tune adds is **concision, faithfulness, and kn
 
 ---
 
-## Act III — Run it privately, offline (`module3_app/`)  · *planned*
+## Act III — Run it privately, offline (`module3_app/`)
 
-A local "Shakespearean Writing Studio": rewrite your own drafts into the Bard's voice and get
-in-voice feedback — with a **provable no-egress guarantee**. The model runs on-device via
-`llama.cpp`; a network-monitor test asserts zero outbound connections. The privacy motivation is
-real: **unpublished creative writing is sensitive IP** you shouldn't have to hand to a cloud API.
+A local "Shakespearean Writing Studio" (FastAPI + a bundled single-page frontend): rewrite your
+own drafts into the Bard's voice and get in-voice feedback — with a **provable no-egress
+guarantee**. The model runs on-device (in-process GGUF, or a `127.0.0.1` llama.cpp/Ollama server,
+or a built-in demo transformer); a network-monitor test asserts zero outbound connections. The
+privacy motivation is real: **unpublished creative writing is sensitive IP** you shouldn't have to
+hand to a cloud API.
+
+![Studio view](docs/screenshots/studio.png)
+
+The **Privacy view** makes the guarantee demonstrable, not just asserted:
+
+![Privacy view](docs/screenshots/privacy.png)
+
+```bash
+.venv/bin/python -m module3_app.backend.app     # open http://127.0.0.1:8000
+./module3_app/privacy/no_egress_test.sh          # → "✓ PASS — no egress"
+```
+
+Runs on a fresh clone with **no model** (demo mode) so the app + privacy test work immediately;
+drop a GGUF into `module3_app/models/` for the real Bard. See
+[`module3_app/README.md`](module3_app/README.md).
 
 ---
 
