@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Data & model artifacts (regenerable / large)
+module1_from_scratch/data/*.txt
+module1_from_scratch/data/*.bin
+*.pt
+*.ckpt
+*.gguf
+*.safetensors
+
+# Training outputs
+**/checkpoints/
+**/runs/
+loss_log.csv
+*.log
+
+# Fine-tune adapter / merged model output dirs (regenerable; weights are large)
+module2_finetune/bardbox-qwen-lora/
+module2_finetune/bardbox-qwen-merged/
+
+# OS / editor
+.DS_Store
+.ipynb_checkpoints/
