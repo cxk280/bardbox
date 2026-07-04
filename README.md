@@ -92,7 +92,9 @@ drop a GGUF into `module3_app/models/` for the real Bard. See
 
 ```bash
 uv venv --python 3.11 .venv          # Intel-Mac PyTorch wheels need Python ≤3.11
-uv pip install --python .venv "torch==2.2.2" "numpy<2" "matplotlib>=3.7"
+uv pip install --python .venv "torch==2.2.2" "numpy<2" "matplotlib>=3.7"   # Acts I & II
+uv pip install --python .venv fastapi uvicorn httpx pytest                 # Act III app
+# optional, for real on-device inference in Act III: pip install llama-cpp-python
 ```
 
 ## Why these constraints are a feature, not a bug
