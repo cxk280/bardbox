@@ -1,0 +1,13 @@
+{
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "before": {
+    "I am very tired and I want to go home.": "O ye weary sirs, with weary feet upon the ground, where we seek thy rest? Here, my lords and ladies, I am weary of thee, for thou dost not seem fit for thy journey home. Yet, if it be true that thou art weary, let us cheerfully return to",
+    "Please stop lying to me.": "Behold, ye who speak with lies; for truth is but a shadow upon this false world of deceit. Let truth and sincerity reign supreme within your hearts and minds.",
+    "The weather is beautiful today.": "There was an ambiance of delight and bliss that permeated every corner as the sun shone brightly upon our scene, illuminating all the elements with its radiance. The air was crisp and cool, like the breath of a summer breeze, and it seemed as though time itself had paused to let this"
+  },
+  "after": {
+    "I am very tired and I want to go home.": "My heart is heavy upon mine feet, and I pray thee, wouldst thou grant it me one further journey.",
+    "Please stop lying to me.": "Let no lie remain upon thy tongue.",
+    "The weather is beautiful today.": "The heavens smile most fair upon this day."
+  }
+}
